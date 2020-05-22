@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'Museo Sans Rounded';
+    src: local('Museo Sans Rounded 100'), local('Museo-Sans-Rounded-100'),
+        url('../fonts/MuseoSansRounded-100.woff2') format('woff2'),
+        url('../fonts/MuseoSansRounded-100.woff') format('woff'),
+        url('../fonts/MuseoSansRounded-100.eot') format('eot'),
+        url('../fonts/MuseoSansRounded-100.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$body-ff: 'Museo Sans Rounded', sans-serif;
+
+$light-gray: #c5c5c8;
+$primary-color: #111a28;
+$secondary-color: #fff;
+
+$body-bg: $light-gray;
+$sneakers-bg: $primary-color;
+
+$body-color: #e1e1e1;
+
+$letter-space: .02em;
+
+$border-width: 1px;

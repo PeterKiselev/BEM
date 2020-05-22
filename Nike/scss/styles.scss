@@ -1,0 +1,183 @@
+@import 'normalize';
+@import 'variables';
+@import 'mixins';
+
+* { box-sizing: border-box; }
+input { display: none; }
+ul { list-style: none; margin: 0; padding: 0; }
+a { text-decoration: none; color: inherit; }
+
+html { font-size: 10px; }
+
+body {
+    background-color: $body-bg;
+    background-image: url(../img/bg-effects-1.png), url(../img/bg-effects-2.png), url(../img/bg-img.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include font($body-ff, 1.4rem, rgba($body-color, .54), $lh: 1.8);
+}
+
+.logo {
+    width: 75px;
+    height: 45px;
+    fill: $body-color;
+
+    @include hover {
+        fill: rgba($body-color, .5);
+        transform: scale(1.1);
+    }
+}
+
+.sneakers {
+    max-width: 700px;
+    width: 100%;
+    min-height: 400px;
+    background-color: $sneakers-bg;
+    border-radius: 10px;
+    box-shadow: 0px 0px 65px 0px rgba(0, 0, 0, 0.82);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    &__content {
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__tabs {
+        flex: 1 0 70%;
+    }
+    &__description {
+        flex: 1 0 25%;
+    }
+}
+
+.tabs-block {
+    max-width: 400px;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+
+    &__img {
+        max-width: 100%;
+        display: none;
+        height: 160px;
+    }
+    &__field[id="tab-1"]:checked ~ &__images &__img--image1,
+    &__field[id="tab-2"]:checked ~ &__images &__img--image2,
+    &__field[id="tab-3"]:checked ~ &__images &__img--image3,
+    &__field[id="tab-4"]:checked ~ &__images &__img--image4 {
+        display: block;
+    }
+    &__field[id="tab-1"]:checked ~ &__tabs &__tab--1,
+    &__field[id="tab-2"]:checked ~ &__tabs &__tab--2,
+    &__field[id="tab-3"]:checked ~ &__tabs &__tab--3,
+    &__field[id="tab-4"]:checked ~ &__tabs &__tab--4 {
+        box-shadow: 0 0 0 2px rgba($secondary-color, .5);
+        width: 13px;
+        height: 13px;
+    }
+    &__tab {
+        cursor: pointer;
+        display: inline-block;
+        margin: 0 5px;
+        width: 10px;
+        height: 10px;
+        vertical-align: middle;
+        border-radius: 50%;
+
+        &--1 {
+            background-color: #1f273f;
+        }
+        &--2 {
+            background-color: $secondary-color;
+        }
+        &--3 {
+            background-color: #ed3333;
+        }
+        &--4 {
+            background-color: #29e3ea;
+        }
+    }
+}
+
+.description {
+    padding: 10px 30px;
+    @media screen and (max-width: 576px) {
+        text-align: center;
+    }
+    &__title {
+        @include font(inherit, 2.4rem, $body-color, $lh: 1.1);
+        letter-spacing: $letter-space;
+        margin-bottom: 15px;
+    }
+    &__stars {
+        margin-top: 20px;
+    }
+    &__star {
+        display: inline-block;
+        color: #f7bf16;
+
+        [data-stars="0"] &:nth-child(n + 1),
+        [data-stars="1"] &:nth-child(n + 2),
+        [data-stars="2"] &:nth-child(n + 3),
+        [data-stars="3"] &:nth-child(n + 4),
+        [data-stars="4"] &:nth-child(n + 5) {
+            color: #9da1a6;
+        }
+    }
+    &__selects {
+        margin-top: 25px;
+    }
+    &__select {
+        background: url(../img/arrow.png) no-repeat;
+        background-position: right 10px center;
+        width: 70px;
+        height: 30px;
+        appearance: none;
+        outline: $border-width solid #4f5560;
+        color: rgba($body-color, .5);
+        padding: 0 13px;
+        text-transform: capitalize;
+        letter-spacing: $letter-space;
+    }
+    &__option {
+        background-color: $sneakers-bg;
+    }
+    &__btn {
+        margin-top: 25px;
+    }
+    
+}
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    max-width: 185px;
+    width: 100%;
+    min-height: 40px;
+    padding: .5em 1em;
+    border: $border-width solid rgba($secondary-color, .259);
+    background-color: rgba(#4c525a, .259);
+    color: inherit;
+    @include tr;
+    @include hover {
+        background-color: rgba($body-color, .5);
+        color: $sneakers-bg;
+        border-color: $body-color;
+        font-weight: 700;
+    }
+}
+  
+
+
+

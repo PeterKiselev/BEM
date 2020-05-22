@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cahee header</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">Cahee</a>
+                <a href="#" class="toggler" onclick="toggleMenu(event)">
+                    <svg width="36" height="36">
+                        <use xlink:href="#menu"></use>
+                    </svg>
+                </a>
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a href="#home" class="menu__link">home</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#about" class="menu__link">about</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#services" class="menu__link">services</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#gallery" class="menu__link">gallery</a
+                            ></li>
+                    <li class="menu__item">
+                        <a href="#blog" class="menu__link">blog</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#contact" class="menu__link">contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="section section--bg section--home" id="home" style="background-image: url(img/bg-first.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col col--1-4">
+                        <div class="section__head">
+                            <h1 class="section__title">fresh life</h1>
+                            <p class="section__subtitle">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                        </div>
+                        <div class="section__link">
+                            <a href="#" class="btn section__btn" target="_blank">get free now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="section__content">
+                    <a href="#about" class="scroll">
+                        <svg class="mouse" width="40" height="40">
+                            <use xlink:href="#mouse">
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="section section--bg section--about" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col col--1-6">
+                        <picture class="section__img-wrap">
+                            <source srcset="https://picsum.photos/425/500" media="(max-width: 425px)">
+                            <source srcset="https://picsum.photos/700/500" media="(max-width: 767px)">
+                            <source srcset="img/about-img.png" media="(min-width: 768px)">
+                            <img class="section__img" src="img/about-img.png" alt="about us">
+                        </picture>
+                    </div>
+                    <div class="col col--1-6">
+                        <div class="section__head section__head--white">
+                            <h2 class="section__title">about us</h2>
+                            <p class="section__subtitle">Abore Cahee magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+                            <p class="section__subtitle">Nim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <svg style="display: none;">
+        <symbol id="menu" viewBox="0 -53 384 384">
+            <path d="m368 154.667969h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/>
+            <path d="m368 32h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/>
+            <path d="m368 277.332031h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/>
+        </symbol>
+        <symbol id="mouse" viewBox="0 0 40 40">
+            <g clip-path="url(#clip0)">
+                <path d="M19.9689 0C13.4811 0 8.20313 5.27802 8.20313 11.7657V28.2343C8.20313 34.722 13.4811 40 19.9689 40C26.4566 40 31.7346 34.722 31.7346 28.2343V11.7657C31.7346 5.27802 26.4566 0 19.9689 0ZM29.3347 28.2343C29.3347 33.3984 25.1331 37.6001 19.9689 37.6001C14.8047 37.6001 10.603 33.3984 10.603 28.2343V11.7657C10.603 6.60156 14.8047 2.3999 19.9689 2.3999C25.1331 2.3999 29.3347 6.60156 29.3347 11.7657V28.2343Z"/>
+                <path d="M19.9692 7.95715C19.3063 7.95715 18.7692 8.49426 18.7692 9.1571V14.6802C18.7692 15.3427 19.3063 15.8801 19.9692 15.8801C20.6317 15.8801 21.1691 15.3427 21.1691 14.6802V9.1571C21.1691 8.49426 20.632 7.95715 19.9692 7.95715Z"/>
+                </g>
+                <defs>
+                <clipPath id="clip0">
+                <rect width="40" height="40"/>
+                </clipPath>
+                </defs>
+        </symbol>
+    </svg>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
